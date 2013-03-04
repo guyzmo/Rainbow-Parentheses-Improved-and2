@@ -33,6 +33,10 @@
 "	:RainbowToggle		--you can use it to toggle this plugin.
 "	:Rainbow			--you can use it to toggle this plugin.
 
+if exists("loaded_rainbow_parentheses") || &cp
+    finish
+endif
+let loaded_rainbow_parentheses = 1
 
 " read file vim73/rgb.txt for all named colors
 let s:guifgs = exists('g:rainbow_guifgs')? g:rainbow_guifgs : [
